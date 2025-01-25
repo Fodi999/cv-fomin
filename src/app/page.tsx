@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   Drawer,
@@ -19,10 +19,7 @@ import ContactMeContent from "@/components/content/ContactMeContent";
 import AdvancedServicesContent from "@/components/content/AdvancedServicesContent";
 import enSectionsData from "@/language/en/pagesections.json";
 import plSectionsData from "@/language/pl/pagesections.json";
-import ContactContent from "@/components/content/ContactContent";
-import { Sun, Moon, Mail } from "lucide-react";
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
+import Header from "@/components/Header";
 
 interface SectionProps {
   title: string;
@@ -91,72 +88,23 @@ const contentComponents: { [key: string]: React.ComponentType<{ language: "en" |
   AdvancedServicesContent,
 };
 
-const Header: React.FC<{
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-  language: "en" | "pl";
-  toggleLanguage: () => void;
-}> = ({ isDarkMode, toggleDarkMode, language, toggleLanguage }) => {
-  return (
-    <header className={`w-full py-4 shadow-lg z-10 fixed top-0 left-0 transition-colors ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'}`}>
-      <div className="container mx-auto flex justify-between items-center px-6">
-        <h1 className="text-xl font-bold">My Website</h1>
-        <div className="flex items-center space-x-4">
-          <Label htmlFor="theme-switch">Dark Mode</Label>
-          <Switch
-            id="theme-switch"
-            checked={isDarkMode}
-            onCheckedChange={toggleDarkMode}
-          />
-          <div className="ml-2">
-            {isDarkMode ? <Moon size={24} /> : <Sun size={24} />}
-          </div>
-          {/* Переключатель языка */}
-          <button
-            onClick={toggleLanguage}
-            className={`px-4 py-2 rounded-lg ${language === "en" ? "bg-blue-500 text-white" : "bg-green-500 text-white"} hover:opacity-90`}
-          >
-            {language.toUpperCase()}
-          </button>
-          {/* Кнопка "Контакты" */}
-          <Drawer>
-            <DrawerTrigger asChild>
-              <Button className="flex items-center space-x-2 bg-blue-500 text-white hover:bg-blue-600">
-                <Mail size={20} />
-                <span>{language === "en" ? "Contact" : "Kontakt"}</span>
-              </Button>
-            </DrawerTrigger>
-            <DrawerContent>
-              <DrawerHeader>
-                <DrawerTitle>{language === "en" ? "Contact Me" : "Skontaktuj się ze mną"}</DrawerTitle>
-                <DrawerDescription />
-              </DrawerHeader>
-              <div className="p-4">
-                <ContactContent language={language} />
-              </div>
-              <DrawerFooter>
-                <DrawerClose asChild>
-                  <Button variant="secondary" className="w-full">
-                    Close
-                  </Button>
-                </DrawerClose>
-              </DrawerFooter>
-            </DrawerContent>
-          </Drawer>
-        </div>
-      </div>
-    </header>
-  );
-};
-
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [language, setLanguage] = useState<"en" | "pl">("en");
 
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (isDarkMode) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [isDarkMode]);
+
   const sectionsData = language === "en" ? enSectionsData : plSectionsData;
 
   return (
-    <div className="p-6 transition-colors">
+    <div className={`p-6 transition-colors ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <Header
         isDarkMode={isDarkMode}
         toggleDarkMode={() => setIsDarkMode(!isDarkMode)}

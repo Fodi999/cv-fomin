@@ -3,6 +3,7 @@
 import { Bebas_Neue, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import React, { useState, useEffect } from "react";
+import Header from "@/components/Header";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -20,8 +21,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isDarkMode] = useState(false);
-  const [language] = useState<"en" | "pl">("en");
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [language, setLanguage] = useState<"en" | "pl">("en");
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -34,10 +35,16 @@ export default function RootLayout({
 
   return (
     <html lang={language} className={isDarkMode ? "dark" : ""}>
-      <body className={`${bebasNeue.variable} ${geistMono.variable} antialiased transition-colors`}>
-        <div className={`min-h-screen p-4 sm:p-8 font-sans ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
+      <body className={`${bebasNeue.variable} ${geistMono.variable} antialiased transition-colors ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
+        <div className="min-h-screen w-full h-full font-sans">
+          <Header 
+            isDarkMode={isDarkMode} 
+            toggleDarkMode={() => setIsDarkMode(!isDarkMode)} 
+            language={language} 
+            toggleLanguage={() => setLanguage(language === "en" ? "pl" : "en")} 
+          />
           {/* Контент */}
-          <main className="pt-20">{children}</main>
+          <main >{children}</main>
         </div>
       </body>
     </html>
