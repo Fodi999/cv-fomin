@@ -25,7 +25,7 @@ interface SectionProps {
   title: string;
   imageUrl: string;
   buttonText?: string;
-  ContentComponent: React.ComponentType<{ language: "en" | "pl" }>; // Компонент контента для Drawer
+  ContentComponent: React.ComponentType<{ language: "en" | "pl"; onClose?: () => void }>; // Компонент контента для Drawer
   language: "en" | "pl";
 }
 
@@ -36,6 +36,12 @@ const SectionWithImage: React.FC<SectionProps> = ({
   ContentComponent,
   language,
 }) => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsDrawerOpen(false);
+  };
+
   return (
     <section className="relative h-60 md:h-72 lg:h-96 rounded-lg overflow-hidden shadow-md group">
       {/* Фото на заднем плане */}
@@ -53,19 +59,19 @@ const SectionWithImage: React.FC<SectionProps> = ({
         <h2 className="text-lg md:text-xl lg:text-2xl font-bold">{title}</h2>
 
         {/* Кнопка, открывающая Drawer */}
-        <Drawer>
+        <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
           <DrawerTrigger asChild>
             <Button className="bg-white text-black hover:bg-gray-200">
               {buttonText}
             </Button>
           </DrawerTrigger>
-          <DrawerContent>
+          <DrawerContent className="overflow-y-auto mt-16 sm:mt-20 lg:mt-24 rounded-lg shadow-lg h-[90%]">
             <DrawerHeader>
               <DrawerTitle>{title}</DrawerTitle>
               <DrawerDescription />
             </DrawerHeader>
             <div className="p-4">
-              <ContentComponent language={language} />
+              <ContentComponent language={language} onClose={handleClose} />
             </div>
             <DrawerFooter>
               <DrawerClose asChild>
@@ -81,7 +87,7 @@ const SectionWithImage: React.FC<SectionProps> = ({
   );
 };
 
-const contentComponents: { [key: string]: React.ComponentType<{ language: "en" | "pl" }> } = {
+const contentComponents: { [key: string]: React.ComponentType<{ language: "en" | "pl"; onClose?: () => void }> } = {
   AboutMeContent,
   WebflowContent,
   ContactMeContent,

@@ -8,7 +8,7 @@ interface Section {
   id: string;
   title: string;
   imageUrl?: string;
-  description: string;
+  description?: string; // Описание может быть необязательным
   buttonText?: string;
 }
 
@@ -31,9 +31,11 @@ const WebflowContent: React.FC<{ language: "en" | "pl" }> = ({ language }) => {
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white">
           {webflowContent.title}
         </h2>
-        <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-400">
-          {webflowContent.description}
-        </p>
+        {webflowContent.description && (
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-400">
+            {webflowContent.description}
+          </p>
+        )}
         {webflowContent.buttonText && (
           <button className="px-4 py-2 bg-blue-500 text-white text-sm sm:text-base rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
             {webflowContent.buttonText}

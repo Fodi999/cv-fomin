@@ -3,7 +3,7 @@
       {
         "id": "section-1",
         "title": "O Mnie",
-        "imageUrl": "/000027.jpg",
+        "imageUrl": "/000034.jpg",
         "buttonText": "Dowiedz się więcej",
         "contentComponent": "AboutMeContent"
       },
@@ -17,14 +17,14 @@
       {
         "id": "section-3",
         "title": "Skontaktuj się ze mną",
-        "imageUrl": "/000027.jpg",
+        "imageUrl": "/000036.jpg",
         "buttonText": "Wyślij wiadomość",
         "contentComponent": "ContactMeContent"
       },
       {
         "id": "section-4",
         "title": "Zaawansowane Usługi",
-        "imageUrl": "/000027.jpg",
+        "imageUrl": "/000029.jpg",
         "buttonText": "Odkryj",
         "contentComponent": "AdvancedServicesContent"
       }

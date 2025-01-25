@@ -3,7 +3,7 @@
       {
         "id": "section-1",
         "title": "About Me",
-        "imageUrl": "/000027.jpg",
+        "imageUrl": "/000034.jpg",
         "buttonText": "Learn More",
         "contentComponent": "AboutMeContent"
       },
@@ -17,14 +17,14 @@
       {
         "id": "section-3",
         "title": "Contact Me",
-        "imageUrl": "/000027.jpg",
+        "imageUrl": "/000036.jpg",
         "buttonText": "Send Message",
         "contentComponent": "ContactMeContent"
       },
       {
         "id": "section-4",
         "title": "Advanced Services",
-        "imageUrl": "/000027.jpg",
+        "imageUrl": "/000029.jpg",
         "buttonText": "Explore",
         "contentComponent": "AdvancedServicesContent"
       }
