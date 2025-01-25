@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Базовые стили */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Переменные для тем и других настроек */
+@layer base {
+  :root {
+    --background-light: #ffffff; /* Светлый фон */
+    --background-dark: #1a1a1a; /* Темный фон */
+    --foreground-light: #000000; /* Цвет текста для светлой темы */
+    --foreground-dark: #ffffff; /* Цвет текста для темной темы */
+    --radius: 0.5rem; /* Радиус для закругленных элементов */
+  }
+
+  /* Темная тема */
+  .dark {
+    --background-light: #1a1a1a; /* Фон для темной темы */
+    --background-dark: #ffffff; /* Альтернативный фон */
+    --foreground-light: #ffffff; /* Текст для темной темы */
+    --foreground-dark: #000000; /* Альтернативный текст */
+  }
+}
+
+/* Применение переменных */
+.bg-background-light {
+  background-color: var(--background-light);
+}
+
+.text-text-light {
+  color: var(--foreground-light);
+}
+
+.bg-background-dark {
+  background-color: var(--background-dark);
+}
+
+.text-text-dark {
+  color: var(--foreground-dark);
+}

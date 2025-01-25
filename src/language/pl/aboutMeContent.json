@@ -1,0 +1,30 @@
+{
+  "sections": [
+    {
+      "id": "about-me",
+      "title": "O mnie",
+      "imageUrl": "/000034.jpg",
+      "description": "Cześć! Jestem pasjonatem programowania z wieloletnim doświadczeniem w tworzeniu dynamicznych i responsywnych stron internetowych. Specjalizuję się w budowaniu nowoczesnych interfejsów użytkownika i zapewnianiu płynnych doświadczeń użytkownika. Moim celem jest tworzenie rozwiązań, które nie tylko spełniają potrzeby biznesowe, ale również zachwycają użytkowników.",
+      "buttonText": "Dowiedz się więcej"
+    },
+    {
+      "id": "advanced-services",
+      "title": "Zaawansowane Usługi",
+      "imageUrl": "/000027.jpg",
+      "description": "Odkryj nowoczesne usługi dostosowane do zwiększenia potencjału Twojej firmy. Od tworzenia aplikacji na zamówienie po rozwiązania w chmurze — realizujemy innowacyjne pomysły z precyzją i kreatywnością.",
+      "buttonText": "Odkryj Teraz"
+    },
+    {
+      "id": "contact-me",
+      "title": "Skontaktuj się ze mną",
+      "imageUrl": "/000034.jpg",
+      "description": "Skontaktuj się ze mną w dowolnym momencie. Jestem tutaj, aby pomóc Ci w realizacji projektów i wcielić Twoje pomysły w życie!"
+    },
+    {
+      "id": "webflow",
+      "title": "Rozwój Webflow",
+      "description": "Rozwój Webflow to moja specjalność. Tworzę szybkie, wydajne i pięknie zaprojektowane strony internetowe, które są łatwe w zarządzaniu i aktualizacji.",
+      "buttonText": "Dowiedz się więcej"
+    }
+  ]
+}

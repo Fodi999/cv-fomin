@@ -1,0 +1,32 @@
+{
+    "sections": [
+      {
+        "id": "section-1",
+        "title": "O Mnie",
+        "imageUrl": "/000034.jpg",
+        "buttonText": "Dowiedz się więcej",
+        "contentComponent": "AboutMeContent"
+      },
+      {
+        "id": "section-2",
+        "title": "Tworzenie w Webflow",
+        "imageUrl": "/000027.jpg",
+        "buttonText": "Zacznij",
+        "contentComponent": "WebflowContent"
+      },
+      {
+        "id": "section-3",
+        "title": "Skontaktuj się ze mną",
+        "imageUrl": "/000027.jpg",
+        "buttonText": "Wyślij wiadomość",
+        "contentComponent": "ContactMeContent"
+      },
+      {
+        "id": "section-4",
+        "title": "Zaawansowane Usługi",
+        "imageUrl": "/000027.jpg",
+        "buttonText": "Odkryj",
+        "contentComponent": "AdvancedServicesContent"
+      }
+    ]
+  }
