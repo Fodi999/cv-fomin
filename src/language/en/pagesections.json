@@ -1,32 +1,72 @@
 {
-    "sections": [
-      {
-        "id": "section-1",
-        "title": "About Me",
-        "imageUrl": "/000034.jpg",
-        "buttonText": "Learn More",
-        "contentComponent": "AboutMeContent"
-      },
-      {
-        "id": "section-2",
-        "title": "Webflow Development",
-        "imageUrl": "/000027.jpg",
-        "buttonText": "Get Started",
-        "contentComponent": "WebflowContent"
-      },
-      {
-        "id": "section-3",
-        "title": "Contact Me",
-        "imageUrl": "/000036.jpg",
-        "buttonText": "Send Message",
-        "contentComponent": "ContactMeContent"
-      },
-      {
-        "id": "section-4",
-        "title": "Advanced Services",
-        "imageUrl": "/000029.jpg",
-        "buttonText": "Explore",
-        "contentComponent": "AdvancedServicesContent"
-      }
-    ]
-  }
+  "card": [
+    {
+      "id": "1",
+      "slug": "about-me",
+      "title": "About Me",
+      "imageUrl": "/000034.jpg",
+      "description": "Learn more about me and my journey.",
+      "buttonText": "Learn More",
+      "contentComponent": "AboutMeContent",
+      "capacities": [
+        { "value": "Capacity 1", "active": true },
+        { "value": "Capacity 2", "active": false }
+      ],
+      "price": "$100",
+      "prev": null,
+      "next": "advanced-services",
+      "content": "This is a rich and delicious chocolate cake recipe."
+    },
+    {
+      "id": "2",
+      "slug": "advanced-services",
+      "title": "Advanced Services",
+      "imageUrl": "/000027.jpg",
+      "description": "Explore our advanced services.",
+      "buttonText": "Explore Now",
+      "contentComponent": "AdvancedServicesContent",
+      "capacities": [
+        { "value": "Capacity 1", "active": true },
+        { "value": "Capacity 2", "active": false }
+      ],
+      "price": "$200",
+      "prev": "about-me",
+      "next": "web-development",
+      "content": "Discover our range of advanced services designed to meet your needs."
+    },
+    {
+      "id": "3",
+      "slug": "web-development",
+      "title": "Web Development",
+      "imageUrl": "/000029.jpg",
+      "description": "Professional web development services.",
+      "buttonText": "Get Started",
+      "contentComponent": "WebDevelopmentContent",
+      "capacities": [
+        { "value": "Capacity 1", "active": true },
+        { "value": "Capacity 2", "active": false }
+      ],
+      "price": "$300",
+      "prev": "advanced-services",
+      "next": "seo-optimization",
+      "content": "Get started with our professional web development services."
+    },
+    {
+      "id": "4",
+      "slug": "seo-optimization",
+      "title": "SEO Optimization",
+      "imageUrl": "/000036.jpg",
+      "description": "Improve your website's SEO.",
+      "buttonText": "Optimize Now",
+      "contentComponent": "SEOContent",
+      "capacities": [
+        { "value": "Capacity 1", "active": true },
+        { "value": "Capacity 2", "active": false }
+      ],
+      "price": "$400",
+      "prev": "web-development",
+      "next": null,
+      "content": "Enhance your website's visibility with our SEO optimization services."
+    }
+  ]
+}

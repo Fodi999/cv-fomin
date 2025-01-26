@@ -1,139 +1,91 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import { Card, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
-import {
-  Drawer,
-  DrawerTrigger,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerClose,
-} from "@/components/ui/drawer";
-import { Button } from "@/components/ui/button";
-import AboutMeContent from "@/components/content/AboutMeContent";
-import WebflowContent from "@/components/content/WebflowContent";
-import ContactMeContent from "@/components/content/ContactMeContent";
-import AdvancedServicesContent from "@/components/content/AdvancedServicesContent";
-import enSectionsData from "@/language/en/pagesections.json";
-import plSectionsData from "@/language/pl/pagesections.json";
-import Header from "@/components/Header";
+import enPageSections from "@/language/en/pagesections.json";
+import plPageSections from "@/language/pl/pagesections.json";
+import { ShoppingCart, Heart } from "lucide-react";
 
-interface SectionProps {
-  title: string;
-  imageUrl: string;
-  buttonText?: string;
-  ContentComponent: React.ComponentType<{ language: "en" | "pl"; onClose?: () => void }>; // Компонент контента для Drawer
-  language: "en" | "pl";
-}
-
-const SectionWithImage: React.FC<SectionProps> = ({
-  title,
-  imageUrl,
-  buttonText = "Open Drawer",
-  ContentComponent,
-  language,
-}) => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  const handleClose = () => {
-    setIsDrawerOpen(false);
-  };
-
-  return (
-    <section className="relative h-60 md:h-72 lg:h-96 rounded-lg overflow-hidden shadow-md group">
-      {/* Фото на заднем плане */}
-      <Image
-        src={imageUrl}
-        alt={title}
-        fill
-        priority
-        style={{ objectFit: "cover" }}
-        className="rounded-lg group-hover:scale-110 transition-transform duration-300"
-      />
-
-      {/* Текст и кнопка внизу */}
-      <div className="absolute inset-x-0 bottom-0 bg-black/40 p-4 flex items-center justify-between text-white">
-        <h2 className="text-lg md:text-xl lg:text-2xl font-bold">{title}</h2>
-
-        {/* Кнопка, открывающая Drawer */}
-        <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
-          <DrawerTrigger asChild>
-            <Button className="bg-white text-black hover:bg-gray-200">
-              {buttonText}
-            </Button>
-          </DrawerTrigger>
-          <DrawerContent className="overflow-y-auto mt-16 sm:mt-20 lg:mt-24 rounded-lg shadow-lg h-[90%]">
-            <DrawerHeader>
-              <DrawerTitle>{title}</DrawerTitle>
-              <DrawerDescription />
-            </DrawerHeader>
-            <div className="p-4">
-              <ContentComponent language={language} onClose={handleClose} />
-            </div>
-            <DrawerFooter>
-              <DrawerClose asChild>
-                <Button variant="secondary" className="w-full">
-                  Close
-                </Button>
-              </DrawerClose>
-            </DrawerFooter>
-          </DrawerContent>
-        </Drawer>
-      </div>
-    </section>
-  );
+const pageSections = {
+  en: enPageSections,
+  pl: plPageSections,
 };
 
-const contentComponents: { [key: string]: React.ComponentType<{ language: "en" | "pl"; onClose?: () => void }> } = {
-  AboutMeContent,
-  WebflowContent,
-  ContactMeContent,
-  AdvancedServicesContent,
-};
-
-export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [language, setLanguage] = useState<"en" | "pl">("en");
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (isDarkMode) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  }, [isDarkMode]);
-
-  const sectionsData = language === "en" ? enSectionsData : plSectionsData;
+export default function HomePage() {
+  const { language } = useLanguage();
+  const { isDarkMode } = useTheme();
+  const sections = pageSections[language as "en" | "pl"].card;
 
   return (
-    <div className={`p-6 transition-colors ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
-      <Header
-        isDarkMode={isDarkMode}
-        toggleDarkMode={() => setIsDarkMode(!isDarkMode)}
-        language={language}
-        toggleLanguage={() => setLanguage(language === "en" ? "pl" : "en")}
-      />
-      {/* Сетка секций */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
-        {sectionsData.sections.map((section) => {
-          const ContentComponent = contentComponents[section.contentComponent as keyof typeof contentComponents];
-          return (
-            <div key={section.id} id={section.id} className="break-inside-avoid">
-              <SectionWithImage
-                title={section.title}
-                imageUrl={section.imageUrl}
-                buttonText={section.buttonText}
-                ContentComponent={ContentComponent}
-                language={language}
+    <div className={`min-h-screen p-8 font-sans transition-colors duration-300 ${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-[#F6E9E0] text-gray-900'}`}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {sections.map((section, index) => (
+          <Card
+            key={section.id}
+            className="relative rounded-3xl overflow-hidden shadow-lg bg-white dark:bg-gray-800"
+          >
+            {/* Image Section */}
+            <div className="relative">
+              <Image
+                src={section.imageUrl}
+                alt={section.title}
+                width={500}
+                height={300}
+                className="w-full h-64 object-cover"
+                priority={index === 0} // Добавляем свойство priority только для первого изображения
               />
+              <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md">
+                <Heart className="text-gray-600" size={20} />
+              </button>
             </div>
-          );
-        })}
+
+            {/* Content Section */}
+            <CardHeader className="p-6">
+              {/* Title */}
+              <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                {section.title}
+              </h1>
+
+              {/* Capacities */}
+              <div className="flex gap-2 mt-2">
+                {section.capacities.map((capacity, index) => (
+                  <span
+                    key={index}
+                    className={`px-3 py-1 rounded-full border text-sm ${
+                      capacity.active
+                        ? "bg-orange-500 text-white border-orange-500"
+                        : "border-gray-300 text-gray-600 dark:border-gray-600 dark:text-gray-300"
+                    }`}
+                  >
+                    {capacity.value}
+                  </span>
+                ))}
+              </div>
+
+              {/* Description */}
+              <p className="mt-4 text-sm text-gray-700 dark:text-gray-300">
+                {section.description}
+              </p>
+
+              {/* Price and Button */}
+              <div className="flex justify-between items-center mt-6">
+                <span className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                  {section.price}
+                </span>
+                <button className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                  <ShoppingCart size={18} />
+                  <span>{section.buttonText}</span>
+                </button>
+              </div>
+            </CardHeader>
+          </Card>
+        ))}
       </div>
     </div>
   );
 }
+
+

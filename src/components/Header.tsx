@@ -1,84 +1,38 @@
 "use client";
-
 import React from "react";
 import { Switch } from "@/components/ui/switch";
-import { Sun, Moon, Mail } from "lucide-react";
-import {
-  Drawer,
-  DrawerTrigger,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerClose,
-} from "@/components/ui/drawer";
+import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
-import ContactContent from "@/components/content/ContactContent";
 
-interface HeaderProps {
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-  language: "en" | "pl";
-  toggleLanguage: () => void;
-}
+export default function Header() {
+  const { language, setLanguage } = useLanguage(); // Подключаем язык из контекста
 
-const Header: React.FC<HeaderProps> = ({
-  isDarkMode,
-  toggleDarkMode,
-  language,
-  toggleLanguage,
-}) => {
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "pl" : "en");
+  };
+
   return (
-    <header className={`w-full py-4 shadow-lg z-10 fixed top-0 left-0 transition-colors ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'}`}>
-      <div className="container mx-auto flex justify-between items-center px-6">
-        <h1 className="text-xl font-bold">FISH MASTER</h1>
-        <div className="flex items-center space-x-4">
-        
-          <Switch
-            id="theme-switch"
-            checked={isDarkMode}
-            onCheckedChange={toggleDarkMode}
-          />
-          <div className="ml-2">
-            {isDarkMode ? <Moon size={24} /> : <Sun size={24} />}
-          </div>
-          {/* Переключатель языка */}
-          <button
-            onClick={toggleLanguage}
-            className={`px-4 py-2 rounded-lg ${language === "en" ? "bg-blue-500 text-white" : "bg-green-500 text-white"} hover:opacity-90`}
-          >
-            {language.toUpperCase()}
-          </button>
-          {/* Кнопка "Контакты" */}
-          <Drawer>
-            <DrawerTrigger asChild>
-              <Button className="flex items-center space-x-2 bg-blue-500 text-white hover:bg-blue-600">
-                <Mail size={20} />
-              
-              </Button>
-            </DrawerTrigger>
-            <DrawerContent>
-              <DrawerHeader>
-                <DrawerTitle>{language === "en" ? "Contact Me" : "Skontaktuj się ze mną"}</DrawerTitle>
-                <DrawerDescription />
-              </DrawerHeader>
-              <div className="p-4">
-                <ContactContent language={language} />
-              </div>
-              <DrawerFooter>
-                <DrawerClose asChild>
-                  <Button variant="secondary" className="w-full">
-                    Close
-                  </Button>
-                </DrawerClose>
-              </DrawerFooter>
-            </DrawerContent>
-          </Drawer>
-        </div>
-      </div>
+    <header className="bg-white dark:bg-black text-black dark:text-white p-6 transition-colors duration-300">
+      <nav className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold">Fish Master</h1>
+        <ul className="flex gap-6 items-center">
+   
+          <li>
+            <Switch /> {/* Переключатель темы */}
+          </li>
+          <li>
+            <Button
+              onClick={toggleLanguage}
+              className="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600"
+            >
+              {language === "en" ? "PL" : "EN"}
+            </Button>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
-};
+}
 
-export default Header;
+
+
