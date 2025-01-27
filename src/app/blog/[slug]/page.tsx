@@ -63,11 +63,10 @@ function ClientContent({ currentContent, currentCard }: { currentContent: Conten
     <div className={`min-h-screen p-8 font-sans transition-colors duration-300 bg-gray-100 dark:bg-gray-800`}>
       <div className="container mx-auto p-6 text-center">
       <div className="text-center">
-        <Link
-          href="/"
-          className="inline-block text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600 rounded-lg px-6 py-2 font-medium transition"
-        >
-          {currentContent.backToHomeText}
+      <Link href="/">
+          <Button className="inline-block text-white bg-blue-800 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600 rounded-full px-6 py-2 font-medium transition">
+            {currentContent.backToHomeText}
+          </Button>
         </Link>
       </div>
      
