@@ -30,10 +30,12 @@ export default function HomePage() {
       {Object.entries(categories).map(([category, items]) => (
         <div key={category} className="mb-8">
           <h2 className="text-2xl font-bold mb-4 capitalize">{category}</h2>
-          <div className="grid grid-cols-1 gap-8">
-            {items.map((section, index) => (
-              <CardComponent key={section.id} section={section} language={language} index={index} />
-            ))}
+          <div className="overflow-x-auto whitespace-nowrap">
+            <div className="inline-flex space-x-4">
+              {items.map((section, index) => (
+                <CardComponent key={section.id} section={section} language={language} index={index} />
+              ))}
+            </div>
           </div>
         </div>
       ))}

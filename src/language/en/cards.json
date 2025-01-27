@@ -79,7 +79,24 @@
         "prev": null,
         "next": null,
         "category": "snacks"
+      },
+      {
+        "id": "6",
+        "slug": "about-me",
+        "title": "About Me",
+        "imageUrl": "/000034.jpg",
+        "description": "Learn more about me and my journey.",
+        "buttonText": "Learn More",
+        "capacities": [
+          { "value": "0,300", "active": true },
+          { "value": "Recipe", "active": false }
+        ],
+        "price": "$100",
+        "prev": null,
+        "next": "advanced-services",
+        "category": "sushi"
       }
+      
     ]
   }
   
