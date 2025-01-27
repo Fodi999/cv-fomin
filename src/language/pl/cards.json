@@ -1,0 +1,84 @@
+{
+  "cards": [
+    {
+      "id": "1",
+      "slug": "about-me",
+      "title": "O mnie",
+      "imageUrl": "/000034.jpg",
+      "description": "Dowiedz się więcej o mnie i mojej podróży.",
+      "buttonText": "Dowiedz się więcej",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Przepis", "active": false }
+      ],
+      "price": "100 zł",
+      "prev": null,
+      "next": "zaawansowane-uslugi",
+      "category": "sushi"
+    },
+    {
+      "id": "2",
+      "slug": "zaawansowane-uslugi",
+      "title": "Zaawansowane usługi",
+      "imageUrl": "/000036.jpg",
+      "description": "Poznaj nasze zaawansowane usługi.",
+      "buttonText": "Poznaj",
+      "capacities": [
+        { "value": "0,500", "active": true },
+        { "value": "Usługa", "active": false }
+      ],
+      "price": "200 zł",
+      "prev": "about-me",
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "3",
+      "slug": "zestawy",
+      "title": "Zestawy",
+      "imageUrl": "/000036.jpg",
+      "description": "Odkryj nasze pyszne zestawy.",
+      "buttonText": "Odkryj",
+      "capacities": [
+        { "value": "1,000", "active": true },
+        { "value": "Zestaw", "active": false }
+      ],
+      "price": "300 zł",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "4",
+      "slug": "salatki",
+      "title": "Sałatki",
+      "imageUrl": "/000027.jpg",
+      "description": "Spróbuj naszych świeżych sałatek.",
+      "buttonText": "Spróbuj",
+      "capacities": [
+        { "value": "0,200", "active": true },
+        { "value": "Sałatka", "active": false }
+      ],
+      "price": "50 zł",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "5",
+      "slug": "przekaski",
+      "title": "Przekąski",
+      "imageUrl": "/000029.jpg",
+      "description": "Ciesz się naszymi smacznymi przekąskami.",
+      "buttonText": "Ciesz się",
+      "capacities": [
+        { "value": "0,150", "active": true },
+        { "value": "Przekąska", "active": false }
+      ],
+      "price": "30 zł",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    }
+  ]
+}

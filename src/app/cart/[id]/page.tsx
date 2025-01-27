@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,13 +19,12 @@ interface Section {
 }
 
 export default function CartPage() {
-  const { id } = useParams();
   const { cart, removeFromCart } = useCart();
   const [localCart, setLocalCart] = useState<Section[]>([]);
 
   useEffect(() => {
-    setLocalCart(cart.filter(item => item.id === id));
-  }, [cart, id]);
+    setLocalCart(cart);
+  }, [cart]);
 
   return (
     <div className="container mx-auto p-6">

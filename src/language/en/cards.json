@@ -1,0 +1,85 @@
+{
+    "cards": [
+      {
+        "id": "1",
+        "slug": "about-me",
+        "title": "About Me",
+        "imageUrl": "/000034.jpg",
+        "description": "Learn more about me and my journey.",
+        "buttonText": "Learn More",
+        "capacities": [
+          { "value": "0,300", "active": true },
+          { "value": "Recipe", "active": false }
+        ],
+        "price": "$100",
+        "prev": null,
+        "next": "advanced-services",
+        "category": "sushi"
+      },
+      {
+        "id": "2",
+        "slug": "advanced-services",
+        "title": "Advanced Services",
+        "imageUrl": "/000036.jpg",
+        "description": "Explore our advanced services.",
+        "buttonText": "Explore",
+        "capacities": [
+          { "value": "0,500", "active": true },
+          { "value": "Service", "active": false }
+        ],
+        "price": "$200",
+        "prev": "about-me",
+        "next": null,
+        "category": "rolls"
+      },
+      {
+        "id": "3",
+        "slug": "sets",
+        "title": "Sets",
+        "imageUrl": "/000036.jpg",
+        "description": "Discover our delicious sets.",
+        "buttonText": "Discover",
+        "capacities": [
+          { "value": "1,000", "active": true },
+          { "value": "Set", "active": false }
+        ],
+        "price": "$300",
+        "prev": null,
+        "next": null,
+        "category": "sets"
+      },
+      {
+        "id": "4",
+        "slug": "salads",
+        "title": "Salads",
+        "imageUrl": "/000027.jpg",
+        "description": "Try our fresh salads.",
+        "buttonText": "Try",
+        "capacities": [
+          { "value": "0,200", "active": true },
+          { "value": "Salad", "active": false }
+        ],
+        "price": "$50",
+        "prev": null,
+        "next": null,
+        "category": "salads"
+      },
+      {
+        "id": "5",
+        "slug": "snacks",
+        "title": "Snacks",
+        "imageUrl": "/000029.jpg",
+        "description": "Enjoy our tasty snacks.",
+        "buttonText": "Enjoy",
+        "capacities": [
+          { "value": "0,150", "active": true },
+          { "value": "Snack", "active": false }
+        ],
+        "price": "$30",
+        "prev": null,
+        "next": null,
+        "category": "snacks"
+      }
+    ]
+  }
+  

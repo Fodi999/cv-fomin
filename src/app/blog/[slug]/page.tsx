@@ -1,17 +1,24 @@
 "use client";
 import React, { useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
-import enPageSections from "@/language/en/pagesections.json";
-import plPageSections from "@/language/pl/pagesections.json";
+import enContents from "@/language/en/contents.json";
+import plContents from "@/language/pl/contents.json";
+import enCards from "@/language/en/cards.json";
+import plCards from "@/language/pl/cards.json";
 import Image from "next/image";
 import Link from "next/link";
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "@/components/ui/input-otp";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const pageSections = {
-  en: enPageSections,
-  pl: plPageSections,
+const contentsData = {
+  en: enContents,
+  pl: plContents,
+};
+
+const cardsData = {
+  en: enCards,
+  pl: plCards,
 };
 
 interface Ingredient {
@@ -20,6 +27,7 @@ interface Ingredient {
 }
 
 interface Content {
+  id: string;
   slug: string;
   content: string;
   noPrevText: string;
@@ -39,6 +47,7 @@ interface Content {
 }
 
 interface Card {
+  id: string;
   slug: string;
   title: string;
   imageUrl: string;
@@ -62,14 +71,13 @@ function ClientContent({ currentContent, currentCard }: { currentContent: Conten
   return (
     <div className={`min-h-screen p-8 font-sans transition-colors duration-300 bg-gray-100 dark:bg-gray-800`}>
       <div className="container mx-auto p-6 text-center">
-      <div className="text-center">
-      <Link href="/">
-          <Button className="inline-block text-white bg-blue-800 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600 rounded-full px-6 py-2 font-medium transition">
-            {currentContent.backToHomeText}
-          </Button>
-        </Link>
-      </div>
-     
+        <div className="text-center">
+          <Link href="/">
+            <Button className="inline-block text-white bg-blue-800 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600 rounded-full px-6 py-2 font-medium transition">
+              {currentContent.backToHomeText}
+            </Button>
+          </Link>
+        </div>
       </div>
       <div className="bg-gray-100 dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
         <div className="p-6">
@@ -189,8 +197,6 @@ function ClientContent({ currentContent, currentCard }: { currentContent: Conten
           )}
         </div>
       </div>
-
-    
     </div>
   );
 }
@@ -203,8 +209,8 @@ export default function Page() {
   const lang = searchParams.get("lang") || "en";
 
   const languageCode = lang as "en" | "pl"; // Проверка типа
-  const contents = pageSections[languageCode].contents;
-  const cards = pageSections[languageCode].cards;
+  const contents = contentsData[languageCode].contents;
+  const cards = cardsData[languageCode].cards;
   const currentContent = contents.find((c: Content) => c.slug === slug);
   const currentCard = cards.find((c: Card) => c.slug === slug);
 

@@ -1,23 +1,7 @@
 {
-  "cards": [
-    {
-      "id": "1",
-      "slug": "about-me",
-      "title": "O mnie",
-      "imageUrl": "/000034.jpg",
-      "description": "Dowiedz się więcej o mnie i mojej podróży.",
-      "buttonText": "Dowiedz się więcej",
-      "capacities": [
-        { "value": "0,300", "active": true },
-        { "value": "Przepis", "active": false }
-      ],
-      "price": "100 zł",
-      "prev": null,
-      "next": "zaawansowane-uslugi"
-    }
-  ],
   "contents": [
     {
+      "id": "1",
       "slug": "about-me",
       "content": "To jest bogaty i pyszny przepis na czekoladowe ciasto.",
       "noPrevText": "Brak poprzedniej karty",
@@ -48,3 +32,5 @@
     }
   ]
 }
+
+
