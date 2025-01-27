@@ -5,6 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
 import { Card, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 import enPageSections from "@/language/en/pagesections.json";
 import plPageSections from "@/language/pl/pagesections.json";
 import { ShoppingCart, Heart } from "lucide-react";
@@ -20,7 +21,7 @@ export default function HomePage() {
   const sections = pageSections[language as "en" | "pl"].card;
 
   return (
-    <div className={`min-h-screen p-8 font-sans transition-colors duration-300 ${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-[#F6E9E0] text-gray-900'}`}>
+    <div className={`min-h-screen p-8 font-sans transition-colors duration-300 ${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-900'}`}>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {sections.map((section, index) => (
           <Card
@@ -75,10 +76,10 @@ export default function HomePage() {
                 <span className="text-xl font-bold text-gray-900 dark:text-gray-100">
                   {section.price}
                 </span>
-                <button className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                <Link href={`/blog/${section.slug}?lang=${language}`} className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
                   <ShoppingCart size={18} />
                   <span>{section.buttonText}</span>
-                </button>
+                </Link>
               </div>
             </CardHeader>
           </Card>

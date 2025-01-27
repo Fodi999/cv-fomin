@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 import { Switch } from "@/components/ui/switch";
+import { useTheme } from "@/context/ThemeContext";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {
+  const { isDarkMode, toggleTheme } = useTheme();
   const { language, setLanguage } = useLanguage(); // Подключаем язык из контекста
 
   const toggleLanguage = () => {
@@ -16,9 +18,8 @@ export default function Header() {
       <nav className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">Fish Master</h1>
         <ul className="flex gap-6 items-center">
-   
           <li>
-            <Switch /> {/* Переключатель темы */}
+            <Switch checked={isDarkMode} onChange={toggleTheme} /> {/* Переключатель темы */}
           </li>
           <li>
             <Button

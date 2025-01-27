@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 
 interface ThemeContextType {
   isDarkMode: boolean;
@@ -9,41 +9,42 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem("theme") === "dark";
     }
-    return false; // По умолчанию светлая тема
+    return false;
   });
 
   useEffect(() => {
-    const root = document.documentElement;
     if (isDarkMode) {
-      root.classList.add("dark");
+      document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
     } else {
-      root.classList.remove("dark");
+      document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
   }, [isDarkMode]);
 
-  const toggleTheme = () => setIsDarkMode((prev) => !prev);
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
-}
+};
 
-export function useTheme() {
+export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
-}
+};
 
 
 

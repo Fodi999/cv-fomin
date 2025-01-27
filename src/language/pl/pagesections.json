@@ -2,7 +2,7 @@
   "card": [
     {
       "id": "1",
-      "slug": "o-mnie",
+      "slug": "about-me",
       "title": "O Mnie",
       "imageUrl": "/000034.jpg",
       "description": "Dowiedz się więcej o mnie i mojej podróży.",
@@ -15,58 +15,36 @@
       "price": "100 zł",
       "prev": null,
       "next": "zaawansowane-uslugi",
-      "content": "To jest bogaty i pyszny przepis na ciasto czekoladowe."
+      "content": "To jest bogaty i pyszny przepis na ciasto czekoladowe.",
+      "noPrevText": "Brak poprzedniej karty",
+      "noNextText": "Brak następnej karty",
+      "backToHomeText": "← Powrót do strony głównej",
+      "prevText": "Poprzednia",
+      "nextText": "Następna",
+      "goToText": "Idź do"
     },
     {
       "id": "2",
-      "slug": "zaawansowane-uslugi",
-      "title": "Zaawansowane Usługi",
+      "slug": "nowa-karta",
+      "title": "Nowa Karta",
       "imageUrl": "/000027.jpg",
-      "description": "Odkryj nasze zaawansowane usługi.",
-      "buttonText": "Odkryj Teraz",
-      "contentComponent": "AdvancedServicesContent",
+      "description": "Odkryj zawartość nowej karty.",
+      "buttonText": "Czytaj więcej",
+      "contentComponent": "NewCardContent",
       "capacities": [
         { "value": "Pojemność 1", "active": true },
         { "value": "Pojemność 2", "active": false }
       ],
-      "price": "200 zł",
-      "prev": "o-mnie",
-      "next": "rozwoj-web",
-      "content": "Odkryj naszą gamę zaawansowanych usług zaprojektowanych, aby spełnić Twoje potrzeby."
-    },
-    {
-      "id": "3",
-      "slug": "rozwoj-web",
-      "title": "Rozwój Web",
-      "imageUrl": "/000029.jpg",
-      "description": "Profesjonalne usługi rozwoju stron internetowych.",
-      "buttonText": "Zacznij Teraz",
-      "contentComponent": "WebDevelopmentContent",
-      "capacities": [
-        { "value": "Pojemność 1", "active": true },
-        { "value": "Pojemność 2", "active": false }
-      ],
-      "price": "300 zł",
-      "prev": "zaawansowane-uslugi",
-      "next": "optymalizacja-seo",
-      "content": "Rozpocznij korzystanie z naszych profesjonalnych usług rozwoju stron internetowych."
-    },
-    {
-      "id": "4",
-      "slug": "optymalizacja-seo",
-      "title": "Optymalizacja SEO",
-      "imageUrl": "/000036.jpg",
-      "description": "Popraw SEO swojej strony internetowej.",
-      "buttonText": "Optymalizuj Teraz",
-      "contentComponent": "SEOContent",
-      "capacities": [
-        { "value": "Pojemność 1", "active": true },
-        { "value": "Pojemność 2", "active": false }
-      ],
-      "price": "400 zł",
-      "prev": "rozwoj-web",
+      "price": "150 zł",
+      "prev": "about-me",
       "next": null,
-      "content": "Zwiększ widoczność swojej strony internetowej dzięki naszym usługom optymalizacji SEO."
+      "content": "To jest zawartość nowej karty.",
+      "noPrevText": "Brak poprzedniej karty",
+      "noNextText": "Brak następnej karty",
+      "backToHomeText": "← Powrót do strony głównej",
+      "prevText": "Poprzednia",
+      "nextText": "Następna",
+      "goToText": "Idź do"
     }
   ]
 }

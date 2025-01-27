@@ -9,13 +9,8 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<string>(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("language") || "en"; // Язык по умолчанию — английский
-    }
-    return "en";
-  });
+export function LanguageProvider({ children, value }: { children: ReactNode; value: { language: string } }) {
+  const [language, setLanguage] = useState<string>(value.language);
 
   const changeLanguage = (lang: string) => {
     setLanguage(lang);
