@@ -18,7 +18,7 @@ const pageSections = {
 export default function HomePage() {
   const { language } = useLanguage();
   const { isDarkMode } = useTheme();
-  const sections = pageSections[language as "en" | "pl"].card;
+  const sections = pageSections[language as "en" | "pl"].cards;
 
   return (
     <div className={`min-h-screen p-8 font-sans transition-colors duration-300 ${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-900'}`}>
@@ -52,18 +52,20 @@ export default function HomePage() {
 
               {/* Capacities */}
               <div className="flex gap-2 mt-2">
-                {section.capacities.map((capacity, index) => (
-                  <span
-                    key={index}
-                    className={`px-3 py-1 rounded-full border text-sm ${
-                      capacity.active
-                        ? "bg-orange-500 text-white border-orange-500"
-                        : "border-gray-300 text-gray-600 dark:border-gray-600 dark:text-gray-300"
-                    }`}
-                  >
-                    {capacity.value}
-                  </span>
-                ))}
+              {section.capacities.map((capacity, index) => (
+  <Link key={index} href={`/blog/${section.slug}?lang=${language}`}>
+    <button
+      className={`px-3 py-1 rounded-full border text-sm ${
+        capacity.active
+          ? "bg-orange-500 text-white border-orange-500"
+          : "border-gray-300 text-gray-600 dark:border-gray-600 dark:text-gray-300"
+      }`}
+    >
+      {capacity.value}
+    </button>
+  </Link>
+))}
+              
               </div>
 
               {/* Description */}
@@ -76,10 +78,10 @@ export default function HomePage() {
                 <span className="text-xl font-bold text-gray-900 dark:text-gray-100">
                   {section.price}
                 </span>
-                <Link href={`/blog/${section.slug}?lang=${language}`} className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                <button className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
                   <ShoppingCart size={18} />
                   <span>{section.buttonText}</span>
-                </Link>
+                </button>
               </div>
             </CardHeader>
           </Card>
@@ -88,5 +90,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-
