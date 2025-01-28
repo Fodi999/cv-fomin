@@ -3,8 +3,8 @@
     {
       "id": "1",
       "slug": "about-me",
-      "title": "O mnie",
-      "imageUrl": "/000034.jpg",
+      "title": "O Mnie",
+      "imageUrl": "/000002.webp",
       "description": "Dowiedz się więcej o mnie i mojej podróży.",
       "buttonText": "Dowiedz się więcej",
       "capacities": [
@@ -13,14 +13,14 @@
       ],
       "price": "100 zł",
       "prev": null,
-      "next": "zaawansowane-uslugi",
+      "next": "advanced-services",
       "category": "sushi"
     },
     {
       "id": "2",
-      "slug": "zaawansowane-uslugi",
-      "title": "Zaawansowane usługi",
-      "imageUrl": "/000036.jpg",
+      "slug": "advanced-services",
+      "title": "Zaawansowane Usługi",
+      "imageUrl": "/000003.webp",
       "description": "Poznaj nasze zaawansowane usługi.",
       "buttonText": "Poznaj",
       "capacities": [
@@ -34,9 +34,9 @@
     },
     {
       "id": "3",
-      "slug": "zestawy",
+      "slug": "sets",
       "title": "Zestawy",
-      "imageUrl": "/000036.jpg",
+      "imageUrl": "/000004.jpg",
       "description": "Odkryj nasze pyszne zestawy.",
       "buttonText": "Odkryj",
       "capacities": [
@@ -50,9 +50,9 @@
     },
     {
       "id": "4",
-      "slug": "salatki",
+      "slug": "salads",
       "title": "Sałatki",
-      "imageUrl": "/000027.jpg",
+      "imageUrl": "/000005.jpg",
       "description": "Spróbuj naszych świeżych sałatek.",
       "buttonText": "Spróbuj",
       "capacities": [
@@ -66,9 +66,9 @@
     },
     {
       "id": "5",
-      "slug": "przekaski",
+      "slug": "snacks",
       "title": "Przekąski",
-      "imageUrl": "/000029.jpg",
+      "imageUrl": "/000006.jpg",
       "description": "Ciesz się naszymi smacznymi przekąskami.",
       "buttonText": "Ciesz się",
       "capacities": [
@@ -76,6 +76,390 @@
         { "value": "Przekąska", "active": false }
       ],
       "price": "30 zł",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    },
+    {
+      "id": "6",
+      "slug": "about-me",
+      "title": "O Mnie",
+      "imageUrl": "/000007.webp",
+      "description": "Dowiedz się więcej o mnie i mojej podróży.",
+      "buttonText": "Dowiedz się więcej",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Przepis", "active": false }
+      ],
+      "price": "100 zł",
+      "prev": null,
+      "next": "advanced-services",
+      "category": "sushi"
+    },
+    {
+      "id": "7",
+      "slug": "sushi-rolls",
+      "title": "Rolki Sushi",
+      "imageUrl": "/000008.webp",
+      "description": "Pyszne rolki sushi zrobione ze świeżych składników.",
+      "buttonText": "Zamów teraz",
+      "capacities": [
+        { "value": "0,400", "active": true },
+        { "value": "Rolka", "active": false }
+      ],
+      "price": "150 zł",
+      "prev": null,
+      "next": null,
+      "category": "sushi"
+    },
+    {
+      "id": "8",
+      "slug": "sashimi",
+      "title": "Sashimi",
+      "imageUrl": "/000009.webp",
+      "description": "Świeże plastry sashimi, idealne dla miłośników owoców morza.",
+      "buttonText": "Spróbuj",
+      "capacities": [
+        { "value": "0,250", "active": true },
+        { "value": "Plaster", "active": false }
+      ],
+      "price": "120 zł",
+      "prev": null,
+      "next": null,
+      "category": "sushi"
+    },
+    {
+      "id": "9",
+      "slug": "nigiri",
+      "title": "Nigiri",
+      "imageUrl": "/0000010.webp",
+      "description": "Klasyczne nigiri z nowoczesnym akcentem.",
+      "buttonText": "Odkryj",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Kawałek", "active": false }
+      ],
+      "price": "90 zł",
+      "prev": null,
+      "next": null,
+      "category": "sushi"
+    },
+    {
+      "id": "10",
+      "slug": "philadelphia-rolls",
+      "title": "Rolki Philadelphia",
+      "imageUrl": "/0000012.webp",
+      "description": "Kremowe rolki Philadelphia z łososiem i awokado.",
+      "buttonText": "Zamów teraz",
+      "capacities": [
+        { "value": "0,350", "active": true },
+        { "value": "Rolka", "active": false }
+      ],
+      "price": "180 zł",
+      "prev": null,
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "11",
+      "slug": "california-rolls",
+      "title": "Rolki Kalifornijskie",
+      "imageUrl": "/0000013.webp",
+      "description": "Rolki kalifornijskie z krabem i awokado.",
+      "buttonText": "Spróbuj",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Rolka", "active": false }
+      ],
+      "price": "160 zł",
+      "prev": null,
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "12",
+      "slug": "dragon-rolls",
+      "title": "Rolki Smocze",
+      "imageUrl": "/0000014.webp",
+      "description": "Rolki smocze z węgorzem i ogórkiem.",
+      "buttonText": "Odkryj",
+      "capacities": [
+        { "value": "0,400", "active": true },
+        { "value": "Rolka", "active": false }
+      ],
+      "price": "200 zł",
+      "prev": null,
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "13",
+      "slug": "spicy-tuna-rolls",
+      "title": "Rolki z Pikantnym Tuńczykiem",
+      "imageUrl": "/0000015.webp",
+      "description": "Rolki z pikantnym tuńczykiem dla miłośników ostrych smaków.",
+      "buttonText": "Zamów teraz",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Rolka", "active": false }
+      ],
+      "price": "170 zł",
+      "prev": null,
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "14",
+      "slug": "rainbow-rolls",
+      "title": "Rolki Tęczowe",
+      "imageUrl": "/0000016.webp",
+      "description": "Kolorowe rolki tęczowe z różnymi rodzajami ryb.",
+      "buttonText": "Spróbuj",
+      "capacities": [
+        { "value": "0,350", "active": true },
+        { "value": "Rolka", "active": false }
+      ],
+      "price": "190 zł",
+      "prev": null,
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "15",
+      "slug": "sushi-set",
+      "title": "Zestaw Sushi",
+      "imageUrl": "/0000017.webp",
+      "description": "Kompletny zestaw sushi na pełny posiłek.",
+      "buttonText": "Zamów teraz",
+      "capacities": [
+        { "value": "1,000", "active": true },
+        { "value": "Zestaw", "active": false }
+      ],
+      "price": "300 zł",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "16",
+      "slug": "sashimi-set",
+      "title": "Zestaw Sashimi",
+      "imageUrl": "/0000018.webp",
+      "description": "Zestaw świeżych plastrów sashimi.",
+      "buttonText": "Spróbuj",
+      "capacities": [
+        { "value": "0,800", "active": true },
+        { "value": "Zestaw", "active": false }
+      ],
+      "price": "250 zł",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "17",
+      "slug": "nigiri-set",
+      "title": "Zestaw Nigiri",
+      "imageUrl": "/0000019.webp",
+      "description": "Zestaw klasycznego nigiri.",
+      "buttonText": "Odkryj",
+      "capacities": [
+        { "value": "0,600", "active": true },
+        { "value": "Zestaw", "active": false }
+      ],
+      "price": "200 zł",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "18",
+      "slug": "rolls-set",
+      "title": "Zestaw Rolek",
+      "imageUrl": "/0000020.webp",
+      "description": "Zestaw różnych rolek.",
+      "buttonText": "Zamów teraz",
+      "capacities": [
+        { "value": "1,200", "active": true },
+        { "value": "Zestaw", "active": false }
+      ],
+      "price": "350 zł",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "19",
+      "slug": "deluxe-set",
+      "title": "Zestaw Deluxe",
+      "imageUrl": "/0000021.webp",
+      "description": "Luksusowy zestaw z różnymi rodzajami sushi i rolek.",
+      "buttonText": "Spróbuj",
+      "capacities": [
+        { "value": "1,500", "active": true },
+        { "value": "Zestaw", "active": false }
+      ],
+      "price": "400 zł",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "20",
+      "slug": "seaweed-salad",
+      "title": "Sałatka z Wodorostów",
+      "imageUrl": "/0000022.webp",
+      "description": "Orzeźwiająca sałatka z wodorostów.",
+      "buttonText": "Zamów teraz",
+      "capacities": [
+        { "value": "0,200", "active": true },
+        { "value": "Sałatka", "active": false }
+      ],
+      "price": "50 zł",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "21",
+      "slug": "cucumber-salad",
+      "title": "Sałatka z Ogórka",
+      "imageUrl": "/0000023.webp",
+      "description": "Lekka i chrupiąca sałatka z ogórka.",
+      "buttonText": "Spróbuj",
+      "capacities": [
+        { "value": "0,150", "active": true },
+        { "value": "Sałatka", "active": false }
+      ],
+      "price": "40 zł",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "22",
+      "slug": "avocado-salad",
+      "title": "Sałatka z Awokado",
+      "imageUrl": "/0000024.webp",
+      "description": "Kremowa sałatka z awokado z nutą limonki.",
+      "buttonText": "Odkryj",
+      "capacities": [
+        { "value": "0,250", "active": true },
+        { "value": "Sałatka", "active": false }
+      ],
+      "price": "60 zł",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "23",
+      "slug": "wakame-salad",
+      "title": "Sałatka Wakame",
+      "imageUrl": "/0000025.webp",
+      "description": "Tradycyjna sałatka wakame z dressingiem sezamowym.",
+      "buttonText": "Zamów teraz",
+      "capacities": [
+        { "value": "0,200", "active": true },
+        { "value": "Sałatka", "active": false }
+      ],
+      "price": "55 zł",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "24",
+      "slug": "mixed-salad",
+      "title": "Sałatka Mieszana",
+      "imageUrl": "/0000026.webp",
+      "description": "Mieszana sałatka z różnymi świeżymi warzywami.",
+      "buttonText": "Spróbuj",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Sałatka", "active": false }
+      ],
+      "price": "70 zł",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "25",
+      "slug": "edamame",
+      "title": "Edamame",
+      "imageUrl": "/0000027.webp",
+      "description": "Gotowane na parze edamame z odrobiną soli morskiej.",
+      "buttonText": "Zamów teraz",
+      "capacities": [
+        { "value": "0,150", "active": true },
+        { "value": "Przekąska", "active": false }
+      ],
+      "price": "30 zł",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    },
+    {
+      "id": "26",
+      "slug": "tempura",
+      "title": "Tempura",
+      "imageUrl": "/0000028.webp",
+      "description": "Chrupiąca tempura w lekkim cieście.",
+      "buttonText": "Spróbuj",
+      "capacities": [
+        { "value": "0,200", "active": true },
+        { "value": "Przekąska", "active": false }
+      ],
+      "price": "40 zł",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    },
+    {
+      "id": "27",
+      "slug": "gyoza",
+      "title": "Gyoza",
+      "imageUrl": "/0000029.webp",
+      "description": "Smażone gyoza z aromatycznym nadzieniem.",
+      "buttonText": "Odkryj",
+      "capacities": [
+        { "value": "0,180", "active": true },
+        { "value": "Przekąska", "active": false }
+      ],
+      "price": "35 zł",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    },
+    {
+      "id": "28",
+      "slug": "spring-rolls",
+      "title": "Rolki Wiosenne",
+      "imageUrl": "/0000030.webp",
+      "description": "Świeże rolki wiosenne z pikantnym sosem do maczania.",
+      "buttonText": "Zamów teraz",
+      "capacities": [
+        { "value": "0,220", "active": true },
+        { "value": "Przekąska", "active": false }
+      ],
+      "price": "45 zł",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    },
+    {
+      "id": "29",
+      "slug": "takoyaki",
+      "title": "Takoyaki",
+      "imageUrl": "/0000031.webp",
+      "description": "Japońskie kulki z ośmiornicą w sosie.",
+      "buttonText": "Spróbuj",
+      "capacities": [
+        { "value": "0,250", "active": true },
+        { "value": "Przekąska", "active": false }
+      ],
+      "price": "50 zł",
       "prev": null,
       "next": null,
       "category": "snacks"

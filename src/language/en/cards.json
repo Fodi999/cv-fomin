@@ -1,102 +1,405 @@
 {
-    "cards": [
-      {
-        "id": "1",
-        "slug": "about-me",
-        "title": "About Me",
-        "imageUrl": "/000034.jpg",
-        "description": "Learn more about me and my journey.",
-        "buttonText": "Learn More",
-        "capacities": [
-          { "value": "0,300", "active": true },
-          { "value": "Recipe", "active": false }
-        ],
-        "price": "$100",
-        "prev": null,
-        "next": "advanced-services",
-        "category": "sushi"
-      },
-      {
-        "id": "2",
-        "slug": "advanced-services",
-        "title": "Advanced Services",
-        "imageUrl": "/000036.jpg",
-        "description": "Explore our advanced services.",
-        "buttonText": "Explore",
-        "capacities": [
-          { "value": "0,500", "active": true },
-          { "value": "Service", "active": false }
-        ],
-        "price": "$200",
-        "prev": "about-me",
-        "next": null,
-        "category": "rolls"
-      },
-      {
-        "id": "3",
-        "slug": "sets",
-        "title": "Sets",
-        "imageUrl": "/000036.jpg",
-        "description": "Discover our delicious sets.",
-        "buttonText": "Discover",
-        "capacities": [
-          { "value": "1,000", "active": true },
-          { "value": "Set", "active": false }
-        ],
-        "price": "$300",
-        "prev": null,
-        "next": null,
-        "category": "sets"
-      },
-      {
-        "id": "4",
-        "slug": "salads",
-        "title": "Salads",
-        "imageUrl": "/000027.jpg",
-        "description": "Try our fresh salads.",
-        "buttonText": "Try",
-        "capacities": [
-          { "value": "0,200", "active": true },
-          { "value": "Salad", "active": false }
-        ],
-        "price": "$50",
-        "prev": null,
-        "next": null,
-        "category": "salads"
-      },
-      {
-        "id": "5",
-        "slug": "snacks",
-        "title": "Snacks",
-        "imageUrl": "/000029.jpg",
-        "description": "Enjoy our tasty snacks.",
-        "buttonText": "Enjoy",
-        "capacities": [
-          { "value": "0,150", "active": true },
-          { "value": "Snack", "active": false }
-        ],
-        "price": "$30",
-        "prev": null,
-        "next": null,
-        "category": "snacks"
-      },
-      {
-        "id": "6",
-        "slug": "about-me",
-        "title": "About Me",
-        "imageUrl": "/000034.jpg",
-        "description": "Learn more about me and my journey.",
-        "buttonText": "Learn More",
-        "capacities": [
-          { "value": "0,300", "active": true },
-          { "value": "Recipe", "active": false }
-        ],
-        "price": "$100",
-        "prev": null,
-        "next": "advanced-services",
-        "category": "sushi"
-      }
-      
-    ]
-  }
+  "cards": [
+    {
+      "id": "1",
+      "slug": "about-me",
+      "title": "About Me",
+      "imageUrl": "/000002.webp",
+      "description": "Learn more about me and my journey.",
+      "buttonText": "Learn More",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Recipe", "active": false }
+      ],
+      "price": "$100",
+      "prev": null,
+      "next": "advanced-services",
+      "category": "sushi"
+    },
+    {
+      "id": "2",
+      "slug": "advanced-services",
+      "title": "Advanced Services",
+      "imageUrl": "/000003.webp",
+      "description": "Explore our advanced services.",
+      "buttonText": "Explore",
+      "capacities": [
+        { "value": "0,500", "active": true },
+        { "value": "Service", "active": false }
+      ],
+      "price": "$200",
+      "prev": "about-me",
+      "next": null,
+      "category": "sushi"
+    },
+    {
+      "id": "3",
+      "slug": "sushi-rolls",
+      "title": "Sushi Rolls",
+      "imageUrl": "/000004.webp",
+      "description": "Delicious sushi rolls made with fresh ingredients.",
+      "buttonText": "Order Now",
+      "capacities": [
+        { "value": "0,400", "active": true },
+        { "value": "Roll", "active": false }
+      ],
+      "price": "$150",
+      "prev": null,
+      "next": null,
+      "category": "sushi"
+    },
+    {
+      "id": "4",
+      "slug": "sashimi",
+      "title": "Sashimi",
+      "imageUrl": "/000005.webp",
+      "description": "Fresh sashimi slices, perfect for seafood lovers.",
+      "buttonText": "Try It",
+      "capacities": [
+        { "value": "0,250", "active": true },
+        { "value": "Slice", "active": false }
+      ],
+      "price": "$120",
+      "prev": null,
+      "next": null,
+      "category": "sushi"
+    },
+    {
+      "id": "5",
+      "slug": "nigiri",
+      "title": "Nigiri",
+      "imageUrl": "/000006.webp",
+      "description": "Classic nigiri with a modern twist.",
+      "buttonText": "Discover",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Piece", "active": false }
+      ],
+      "price": "$90",
+      "prev": null,
+      "next": null,
+      "category": "sushi"
+    },
+    {
+      "id": "6",
+      "slug": "philadelphia-rolls",
+      "title": "Philadelphia Rolls",
+      "imageUrl": "/000007.webp",
+      "description": "Creamy Philadelphia rolls with salmon and avocado.",
+      "buttonText": "Order Now",
+      "capacities": [
+        { "value": "0,350", "active": true },
+        { "value": "Roll", "active": false }
+      ],
+      "price": "$180",
+      "prev": null,
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "7",
+      "slug": "california-rolls",
+      "title": "California Rolls",
+      "imageUrl": "/000008.webp",
+      "description": "California rolls with crab and avocado.",
+      "buttonText": "Try It",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Roll", "active": false }
+      ],
+      "price": "$160",
+      "prev": null,
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "8",
+      "slug": "dragon-rolls",
+      "title": "Dragon Rolls",
+      "imageUrl": "/000009.webp",
+      "description": "Dragon rolls with eel and cucumber.",
+      "buttonText": "Discover",
+      "capacities": [
+        { "value": "0,400", "active": true },
+        { "value": "Roll", "active": false }
+      ],
+      "price": "$200",
+      "prev": null,
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "9",
+      "slug": "spicy-tuna-rolls",
+      "title": "Spicy Tuna Rolls",
+      "imageUrl": "/0000010.webp",
+      "description": "Spicy tuna rolls for those who love a kick.",
+      "buttonText": "Order Now",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Roll", "active": false }
+      ],
+      "price": "$170",
+      "prev": null,
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "10",
+      "slug": "rainbow-rolls",
+      "title": "Rainbow Rolls",
+      "imageUrl": "/0000011.webp",
+      "description": "Colorful rainbow rolls with assorted fish.",
+      "buttonText": "Try It",
+      "capacities": [
+        { "value": "0,350", "active": true },
+        { "value": "Roll", "active": false }
+      ],
+      "price": "$190",
+      "prev": null,
+      "next": null,
+      "category": "rolls"
+    },
+    {
+      "id": "11",
+      "slug": "sushi-set",
+      "title": "Sushi Set",
+      "imageUrl": "/0000012.webp",
+      "description": "A complete sushi set for a full meal.",
+      "buttonText": "Order Now",
+      "capacities": [
+        { "value": "1,000", "active": true },
+        { "value": "Set", "active": false }
+      ],
+      "price": "$300",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "12",
+      "slug": "sashimi-set",
+      "title": "Sashimi Set",
+      "imageUrl": "/0000013.webp",
+      "description": "A set of fresh sashimi slices.",
+      "buttonText": "Try It",
+      "capacities": [
+        { "value": "0,800", "active": true },
+        { "value": "Set", "active": false }
+      ],
+      "price": "$250",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "13",
+      "slug": "nigiri-set",
+      "title": "Nigiri Set",
+      "imageUrl": "/0000014.webp",
+      "description": "A set of classic nigiri.",
+      "buttonText": "Discover",
+      "capacities": [
+        { "value": "0,600", "active": true },
+        { "value": "Set", "active": false }
+      ],
+      "price": "$200",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "14",
+      "slug": "rolls-set",
+      "title": "Rolls Set",
+      "imageUrl": "/0000015.webp",
+      "description": "A set of assorted rolls.",
+      "buttonText": "Order Now",
+      "capacities": [
+        { "value": "1,200", "active": true },
+        { "value": "Set", "active": false }
+      ],
+      "price": "$350",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "15",
+      "slug": "deluxe-set",
+      "title": "Deluxe Set",
+      "imageUrl": "/0000016.webp",
+      "description": "A deluxe set with a variety of sushi and rolls.",
+      "buttonText": "Try It",
+      "capacities": [
+        { "value": "1,500", "active": true },
+        { "value": "Set", "active": false }
+      ],
+      "price": "$400",
+      "prev": null,
+      "next": null,
+      "category": "sets"
+    },
+    {
+      "id": "16",
+      "slug": "seaweed-salad",
+      "title": "Seaweed Salad",
+      "imageUrl": "/0000017.webp",
+      "description": "Refreshing seaweed salad.",
+      "buttonText": "Order Now",
+      "capacities": [
+        { "value": "0,200", "active": true },
+        { "value": "Salad", "active": false }
+      ],
+      "price": "$50",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "17",
+      "slug": "cucumber-salad",
+      "title": "Cucumber Salad",
+      "imageUrl": "/0000018.webp",
+      "description": "Light and crunchy cucumber salad.",
+      "buttonText": "Try It",
+      "capacities": [
+        { "value": "0,150", "active": true },
+        { "value": "Salad", "active": false }
+      ],
+      "price": "$40",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "18",
+      "slug": "avocado-salad",
+      "title": "Avocado Salad",
+      "imageUrl": "/0000019.webp",
+      "description": "Creamy avocado salad with a hint of lime.",
+      "buttonText": "Discover",
+      "capacities": [
+        { "value": "0,250", "active": true },
+        { "value": "Salad", "active": false }
+      ],
+      "price": "$60",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "19",
+      "slug": "wakame-salad",
+      "title": "Wakame Salad",
+      "imageUrl": "/0000020.webp",
+      "description": "Traditional wakame salad with sesame dressing.",
+      "buttonText": "Order Now",
+      "capacities": [
+        { "value": "0,200", "active": true },
+        { "value": "Salad", "active": false }
+      ],
+      "price": "$55",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "20",
+      "slug": "mixed-salad",
+      "title": "Mixed Salad",
+      "imageUrl": "/0000021.webp",
+      "description": "A mixed salad with a variety of fresh vegetables.",
+      "buttonText": "Try It",
+      "capacities": [
+        { "value": "0,300", "active": true },
+        { "value": "Salad", "active": false }
+      ],
+      "price": "$70",
+      "prev": null,
+      "next": null,
+      "category": "salads"
+    },
+    {
+      "id": "21",
+      "slug": "edamame",
+      "title": "Edamame",
+      "imageUrl": "/0000021.webp",
+      "description": "Steamed edamame with a sprinkle of sea salt.",
+      "buttonText": "Order Now",
+      "capacities": [
+        { "value": "0,150", "active": true },
+        { "value": "Snack", "active": false }
+      ],
+      "price": "$30",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    },
+    {
+      "id": "22",
+      "slug": "tempura",
+      "title": "Tempura",
+      "imageUrl": "/0000024.webp",
+      "description": "Crispy tempura with a light batter.",
+      "buttonText": "Try It",
+      "capacities": [
+        { "value": "0,200", "active": true },
+        { "value": "Snack", "active": false }
+      ],
+      "price": "$40",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    },
+    {
+      "id": "23",
+      "slug": "gyoza",
+      "title": "Gyoza",
+      "imageUrl": "/0000025.webp",
+      "description": "Pan-fried gyoza with a savory filling.",
+      "buttonText": "Discover",
+      "capacities": [
+        { "value": "0,180", "active": true },
+        { "value": "Snack", "active": false }
+      ],
+      "price": "$35",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    },
+    {
+      "id": "24",
+      "slug": "spring-rolls",
+      "title": "Spring Rolls",
+      "imageUrl": "/0000026.webp",
+      "description": "Fresh spring rolls with a tangy dipping sauce.",
+      "buttonText": "Order Now",
+      "capacities": [
+        { "value": "0,220", "active": true },
+        { "value": "Snack", "active": false }
+      ],
+      "price": "$45",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    },
+    {
+      "id": "25",
+      "slug": "takoyaki",
+      "title": "Takoyaki",
+      "imageUrl": "/0000027.webp",
+      "description": "Japanese octopus balls with a savory sauce.",
+      "buttonText": "Try It",
+      "capacities": [
+        { "value": "0,250", "active": true },
+        { "value": "Snack", "active": false }
+      ],
+      "price": "$50",
+      "prev": null,
+      "next": null,
+      "category": "snacks"
+    }
+  ]
+}
   
